@@ -34,9 +34,10 @@ function ArmaTuWeb() {
     <section className="py-5">
       <Container>
         <h2 className="text-center mb-4 text-logica-green">Arma tu Web</h2>
-        <p className="text-center mb-5">
-          Selecciona las secciones que necesitas y calcula el valor final de tu sitio web.
-        </p>
+        <p className="text-center mb-5 armaweb-subtext">
+  Selecciona las secciones que necesitas y calcula el valor final de tu sitio web.
+</p>
+
 
         <div className="text-center mt-4">
           <h4>Total estimado: <span className="text-logica-green">${total.toLocaleString('es-CL')}</span></h4>
@@ -47,10 +48,12 @@ function ArmaTuWeb() {
             const activa = seleccionadas.some(s => s.id === seccion.id);
             return (
               <div className="col-md-6 col-lg-4" key={seccion.id}>
-                <Card className={`h-100 shadow-sm ${activa ? 'border-success' : ''}`}>
+               <Card className={`h-100 armaweb-card ${activa ? 'border-success' : ''}`}>
+
                   <Card.Body>
-                    <Card.Title className="fw-bold">{seccion.nombre}</Card.Title>
-                    <Card.Text>{seccion.descripcion}</Card.Text>
+                  <Card.Title className="fw-bold armaweb-title">{seccion.nombre}</Card.Title>
+<Card.Text className="armaweb-text">{seccion.descripcion}</Card.Text>
+
                     <p className="fw-bold text-end text-logica-green">
                       ${seccion.precio.toLocaleString('es-CL')}
                     </p>
@@ -66,6 +69,9 @@ function ArmaTuWeb() {
               </div>
             );
           })}
+        </div>
+        <div className="text-center mt-4">
+          <h4>Total estimado: <span className="text-logica-green">${total.toLocaleString('es-CL')}</span></h4>
         </div>
 
         {/* 🟢 Botón de cotización */}

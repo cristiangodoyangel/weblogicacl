@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import ArmaTuWeb from './ArmaTuWeb';
 
 function Servicios() {
   return (
@@ -27,7 +28,7 @@ function Servicios() {
         })}
       </script>
 
-      <section className="py-5">
+      <section className="py-5" style={{ backgroundColor: '#f8f9fa' }}>
         <Container>
           <h2 className="text-center mb-5 text-logica-green">Nuestros Servicios</h2>
           <div className="row text-center g-5">
@@ -35,7 +36,7 @@ function Servicios() {
               {
                 icon: 'bi-code-slash',
                 title: 'Desarrollo Web y Software',
-                text: 'Creamos aplicaciones web, sistemas internos y plataformas digitales a medida, usando tecnologías como Java, React y Spring Boot.',
+                text: 'Aplicaciones web plataformas digitales a medida, usando tecnologías como Java, React y Spring Boot.',
               },
               {
                 icon: 'bi-phone',
@@ -45,7 +46,7 @@ function Servicios() {
               {
                 icon: 'bi-graph-up',
                 title: 'SEO y Marketing Digital',
-                text: 'Mejoramos tu presencia online con estrategias SEO, diseño orientado a conversión y posicionamiento en buscadores.',
+                text: 'Mejoramos tu presencia online, diseño orientado a conversión y posicionamiento en buscadores.',
               },
               {
                 icon: 'bi-cloud',
@@ -66,14 +67,15 @@ function Servicios() {
               <div className="col-md-4" key={index}>
                 <div className="service-no-card">
                   <i className={`bi ${service.icon}`}></i>
-                  <h5>{service.title}</h5>
-                  <p>{service.text}</p>
+                  <h5 style={{ fontWeight: 700, fontSize: '1.35rem', marginBottom: '0.5rem' }}>{service.title}</h5>
+                  <p style={{ color: '#333', fontSize: '1.2rem', margin: '0 auto', maxWidth: '260px', lineHeight: '1.6' }}>{service.text}</p>
                 </div>
               </div>
             ))}
           </div>
         </Container>
       </section>
+      <ArmaTuWeb />
     </>
   );
 }

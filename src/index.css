@@ -68,7 +68,7 @@ button:focus-visible {
 
 
 .logica-link {
-  font-size: 1.3rem !important;; 
+  font-size: 1.3rem !important;
   font-weight: 600;
   text-transform: uppercase;
   color: #ffffff !important;
@@ -81,6 +81,9 @@ button:focus-visible {
 
 .text-logica-green {
   color: #00D26A;
+  font-size: 2.5rem !important;
+  text-shadow: #d4d3d3 2px 2px 6px;
+
 }
 
 .service-box {
@@ -113,7 +116,7 @@ button:focus-visible {
 }
 
 .service-no-card i {
-  font-size: 3rem;
+  font-size: 3rem !important;
   color: #00D26A;
   margin-bottom: 1rem;
   display: block;
@@ -122,11 +125,12 @@ button:focus-visible {
 .service-no-card h5 {
   font-weight: 700;
   margin-bottom: 0.5rem;
+  font-size: 1.35rem; /* Aumentado desde el default */
 }
 
 .service-no-card p {
   color: #333;
-  font-size: 0.95rem;
+  font-size: 1.2rem !important;
   margin: 0 auto;
   max-width: 260px;
 }
@@ -154,7 +158,7 @@ button:focus-visible {
 
 .service-no-card p {
   color: #333;
-  font-size: 0.95rem;
+  font-size: 1.2rem !important;
   margin: 0 auto;
   max-width: 260px;
 }
@@ -250,3 +254,257 @@ button:focus-visible {
 .project-box:hover a {
   color: #fff !important;
 }
+
+
+
+/* ===== Página Nosotros ===== */
+
+.nosotros-historia h5 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.nosotros-historia p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.nosotros-filosofia .card,
+.nosotros-equipo .card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  border: none;
+}
+
+.nosotros-filosofia .card:hover,
+.nosotros-equipo .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.nosotros-equipo .card-img-top {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.nosotros-equipo h5 {
+  font-weight: 600;
+}
+
+.nosotros-equipo p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.historia-card {
+  background: #f6f7fa;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #07e248;
+  transition: all 0.3s ease;
+  color: #07183d !important;
+ 
+}
+
+
+.historia-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.historia-card h5 {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: #100541;
+}
+
+.historia-card p {
+  font-size: 0.95rem;
+  color: #060936;
+}
+
+.equipo-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+
+/* ===== Contacto ===== */
+
+.contact-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+  font-size: 2.0rem;
+  color: #00D26A;
+}
+
+.contact-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-card h5 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem !important;
+}
+
+.contact-card p {
+  color: #333;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ===== Botón principal ===== */
+
+.btn-logica {
+  background-color: #1A2A44 !important;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-logica:hover {
+  background-color: #00b35a;
+  color: #fff;
+}
+
+/* ===== Formulario ===== */
+
+.contact-form-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+}
+
+.input-custom {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+}
+
+.input-custom:focus {
+  border-color: #00D26A;
+  box-shadow: 0 0 0 0.25rem rgba(0, 210, 106, 0.2);
+}
+
+/* ===== ReCAPTCHA ajustes opcionales ===== */
+.g-recaptcha {
+  transform: scale(0.95);
+  transform-origin: center;
+}
+
+/* ===== Modal ===== */
+
+.modal-content {
+  border-radius: 12px;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  background-color: #f8f9fa;
+}
+
+/* ===== Separador ===== */
+
+.separador {
+  height: 70px;
+  background: transparent;
+}
+
+.seccion-espaciada {
+  padding-top: 90px !important;
+  padding-bottom: 90px !important;
+}
+
+.clientes-marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding: 1.5rem 0;
+}
+
+.tech-logo {
+  max-height: 60px;
+  opacity: 0.6;
+  filter: grayscale(100%);
+  transition: all 0.3s ease;
+  margin: 10px auto;
+}
+
+.tech-logo:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.service-no-card h5 {
+  font-weight: 700;
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-no-card p {
+  color: #333;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  max-width: 260px;
+  line-height: 1.6;
+}
+
+/* ArmaTuWeb */
+
+.armaweb-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.armaweb-text {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.armaweb-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 36px 28px rgba(0, 0, 0, 0.07);
+}
+
+.armaweb-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.15);
+  border: 2px solid #00D26A;
+}
+
+.armaweb-subtext {
+  font-size: 1.3rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+
+
+
+
