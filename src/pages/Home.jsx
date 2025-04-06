@@ -18,7 +18,9 @@ import docker from '../assets/tech/docker.svg';
 import github from '../assets/tech/github.svg';
 
 import proyecto1 from '../assets/webs/motors360.png';
-import proyecto2 from '../assets/webs/pmt.png';
+import proyecto2 from '../assets/webs/drpc.png';
+import proyecto3 from '../assets/webs/i360.png';
+import proyecto4 from '../assets/webs/pmt.png';
 
 const techLogos = [
   { name: 'React', src: reactLogo },
@@ -32,10 +34,33 @@ const techLogos = [
 function Home() {
   return (
     <>
+      {/* SEO Schema JSON-LD */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Lógica",
+          "url": "https://weblogica.cl",
+          "logo": "https://weblogica.cl/logica.png",
+          "description": "Empresa de desarrollo web, software, apps móviles, marketing digital y soluciones en la nube en Chile.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Antofagasta",
+            "addressCountry": "CL"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+56 9 1234 5678",
+            "contactType": "customer support",
+            "availableLanguage": ["Spanish"]
+          }
+        })}
+      </script>
       <Hero />
 
       {/* 🟢 Servicios */}
-      <section className="py-5" style={{ backgroundColor: '#f8f9fa' }}>
+    
+      <section aria-label="Servicios profesionales de desarrollo" className="services-section mb-5 py-5"style={{ backgroundColor: '#f8f9fa' }}>
         <Container>
           <h2 className="text-center mb-5 text-logica-green">Nuestros Servicios</h2>
           <div className="row justify-content-center text-center g-5">
@@ -174,17 +199,26 @@ function Home() {
     <h2 className="text-center mb-5 text-logica-green">Nuestros Proyectos</h2>
     <div className="row text-center g-4">
       {[
+        
         {
-          name: 'Motors360',
-          image: proyecto1,
-          desc: 'Plataforma de reservas para talleres y servicios automotrices.',
-          link: 'https://motors360.cl',
-        },
-        {
-          name: 'PM&T Integra',
+          name: 'Sistema de reservas de horas',
           image: proyecto2,
-          desc: 'Sistema de gestión interna para planificación educativa.',
-          link: 'https://pmtintegra.cl',
+          desc: 'Este sistema permite a los clientes agendar mantenciones y servicios técnicos para notebooks y PC Gamer, ya sea a domicilio o en taller. Todo el flujo está integrado con WhatsApp, facilitando la comunicación y confirmación de la cita de manera automática.',
+          link: 'https://drpcgamer.vercel.app/',
+        },
+
+        {
+          name: 'Sistema de gestión Integral i360',
+          image: proyecto3,
+          desc: 'Sistema para registrar y monitorear activos físicos de la empresa, como herramientas, vehículos y equipos. Incluye fichas detalladas por activo, historial de asignaciones, ubicación, estado actual y reportes visuales para control y auditoría.',
+          link: '',
+        },
+       
+        {
+          name: ' Web Motors360',
+          image: proyecto1,
+          desc: 'P sitio web moderno para empresa de arriendo de vehículos y soluciones de transporte para la minería. El sitio destaca sus servicios de leasing operativo, arriendo diario y transporte privado. Se estructuró como una vitrina clara y confiable para clientes del rubro industrial. ',
+          link: 'https://www.motors360.cl',
         },
       ].map((project, index) => (
         <div className="col-md-6 col-lg-4" key={index}>

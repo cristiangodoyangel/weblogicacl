@@ -65,15 +65,18 @@ button:focus-visible {
   }
 }
 
-.nav-link {
-  font-size: 7.1rem; /* o usa 1.25rem para un poco más grande */
-}
+
 
 .logica-link {
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.3rem !important;; 
+  font-weight: 600;
   text-transform: uppercase;
+  color: #ffffff !important;
 }
+.logica-link:hover {
+  color: #00D26A !important;
+}
+
 
 
 .text-logica-green {
@@ -224,16 +227,26 @@ button:focus-visible {
 
 .project-box {
   border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(26, 42, 68, 0.15);
+  border: 1px solid rgba(26, 42, 68, 0.1);
+  background-color: #ffffff;
+  color: #000;
 }
 
 .project-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  background-color: #1A2A44 !important; /* azul footer */
+  color: #fff !important; /* texto claro */
+  box-shadow:
+    0 0 50px rgba(0, 210, 106, 0.6),
+    0 10px 55px rgba(3, 196, 106, 0.3);
+  border: 2px solid #00D26A;
 }
 
-
-
-
-
-
+/* Para que los textos internos también cambien de color */
+.project-box:hover h5,
+.project-box:hover p,
+.project-box:hover a {
+  color: #fff !important;
+}

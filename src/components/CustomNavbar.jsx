@@ -8,7 +8,7 @@ function CustomNavbar() {
 
       <Container>
         <Navbar.Brand href="/">
-        <img src={logo} alt="logo" height="80" />
+        <img src={logo} alt="logo" height="90" />
 
 
         </Navbar.Brand>

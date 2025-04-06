@@ -15,9 +15,9 @@ function Footer() {
         <div className="row align-items-center text-center text-md-start">
           {/* 🟢 Logo y nombre */}
           <div className="col-md-4 mb-4 mb-md-0">
-            <img src={logo} alt="Logo Lógica" height="50" className="mb-2" />
+            <img src={logo} alt="Logo Lógica" height="90" className="mb-2" />
             <p style={{ marginBottom: 0, fontSize: '0.95rem' }}>
-              Impulsamos tu crecimiento digital.
+              Innovación y desarrollo.
             </p>
           </div>
 
@@ -36,7 +36,7 @@ function Footer() {
           <div className="col-md-4">
             <h6 className="text-uppercase text-white mb-3">Contacto</h6>
             <p className="mb-1">Antofagasta, Chile</p>
-            <p className="mb-1">+56 9 1234 5678</p>
+            <p className="mb-1">+56 9 41853607</p>
             <p className="mb-0">contacto@weblogica.cl</p>
           </div>
         </div>
