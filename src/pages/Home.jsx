@@ -19,7 +19,7 @@ import docker from '../assets/tech/docker.svg';
 import github from '../assets/tech/github.svg';
 
 // Proyectos
-import proyecto1 from '../assets/webs/motors360.png';
+import proyecto1 from '../assets/webs/cotizador.png';
 import proyecto2 from '../assets/webs/drpc.png';
 import proyecto3 from '../assets/webs/i360.png';
 
@@ -185,16 +185,16 @@ function Home() {
                 link: 'https://drpcgamer.vercel.app/',
               },
               {
-                name: 'Sistema de gestión Integral i360',
-                image: proyecto3,
-                desc: 'Monitorea activos físicos, vehículos y herramientas con reportes visuales.',
-                link: '',
+                name: 'Sistema de Cotización en tiempo real',
+                image: proyecto1,
+                desc: 'Aplicación web para cotizaciones en tiempo real de productos y servicios.',
+                link: 'https://cotizador360.vercel.app/',
               },
               {
-                name: 'Web Motors360',
-                image: proyecto1,
-                desc: 'Sitio moderno para empresa de arriendo de vehículos y leasing operativo.',
-                link: 'https://www.motors360.cl',
+                name: 'Control360',
+                image: proyecto3,
+                desc: 'Sistema integral de control de bodega y activos de empresa.',
+                link: '',
               },
             ].map((project, index) => (
               <div className="col-md-6 col-lg-4" key={index}>
