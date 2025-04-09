@@ -3,7 +3,7 @@ export const seccionesDisponibles = [
       id: 'landing',
       nombre: 'Landing Page',
       descripcion: 'Incluye info del negocio, sección Nosotros, contacto, ubicación y botón de WhatsApp.',
-      precio: 80000,
+      precio: 100000,
       incluidaPorDefecto: true
     },
     {
