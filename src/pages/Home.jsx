@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import Hero from '../components/Hero';
 import { Container } from 'react-bootstrap';
 import logo from '../assets/logica.png';
+import banner from '../assets/banner.png';
 
 // Clientes
 import cliente1 from '../assets/clientes/m360.png';
@@ -73,6 +74,7 @@ function Home() {
 
       <Hero />
 
+ 
       {/* Servicios */}
       <section className="services-section py-5" style={{ backgroundColor: '#f8f9fa' }} aria-label="Servicios profesionales de desarrollo">
         <Container>
