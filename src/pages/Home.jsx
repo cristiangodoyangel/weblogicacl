@@ -4,6 +4,8 @@ import Hero from '../components/Hero';
 import { Container } from 'react-bootstrap';
 import logo from '../assets/logica.png';
 import banner from '../assets/banner.png';
+import bannerPorQueElegir from '../assets/bannerPorQueElegir.png';
+import servicios from '../assets/servicios.png';
 
 // Clientes
 import cliente1 from '../assets/clientes/m360.png';
@@ -48,6 +50,7 @@ function Home() {
         <meta property="og:image" content="https://weblogica.cl/logica.png" />
         <meta property="og:url" content="https://weblogica.cl/" />
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
       </Helmet>
 
       <script type="application/ld+json">
@@ -73,34 +76,56 @@ function Home() {
       </script>
 
       <Hero />
-
- 
-      {/* Servicios */}
-      <section className="services-section py-5" style={{ backgroundColor: '#f8f9fa' }} aria-label="Servicios profesionales de desarrollo">
-        <Container>
-          <h2 className="text-center mb-5 text-logica-green">Nuestros Servicios</h2>
-          <div className="row justify-content-center text-center g-5">
-            {[
-              { icon: 'bi-code-slash', title: 'Desarrollo Web', text: 'Creamos sitios web modernos que representan tu marca con excelencia.' },
-              { icon: 'bi-phone', title: 'Apps Móviles', text: 'Aplicaciones móviles intuitivas, nativas y multiplataforma.' },
-              { icon: 'bi-gear-fill', title: 'Software a Medida', text: 'Soluciones únicas que responden a las necesidades de tu negocio.' },
-            ].map((item, index) => (
-              <div className="col-md-4" key={index}>
-                <div className="service-no-card">
-                  <i className={`bi ${item.icon}`}></i>
-                  <h5>{item.title}</h5>
-                  <p>{item.text}</p>
-                </div>
-              </div>
-            ))}
+{/* Servicios */}
+<section className="services-section py-5" style={{ backgroundColor: '#f8f9fa' }} aria-label="Servicios profesionales de desarrollo">
+  <Container>
+    <h2 className="text-center mb-5 text-logica-green">Nuestros Servicios</h2>
+    <div className="row justify-content-center text-center g-5">
+      {[
+        { icon: 'bi-gear-fill', title: 'Software a Medida', text: 'Soluciones únicas que responden a las necesidades de tu negocio.' },
+        { icon: 'bi-phone', title: 'Apps Móviles', text: 'Aplicaciones móviles intuitivas, nativas y multiplataforma.' },
+        { icon: 'bi-code-slash', title: 'Desarrollo Web', text: 'Creamos sitios web modernos que representan tu marca con excelencia.' },
+        { icon: 'bi-hdd-network', title: 'Hosting', text: 'Alojamiento web seguro, rápido y escalable para tus proyectos digitales.' },
+      ].map((item, index) => (
+        <div className="col-md-3" key={index}>
+          <div className="service-no-card">
+            <i className={`bi ${item.icon}`}></i>
+            <h5>{item.title}</h5>
+            <p>{item.text}</p>
           </div>
-        </Container>
-      </section>
+        </div>
+      ))}
+    </div>
+
+
+   {/* Párrafo descriptivo con imagen al lado */}
+    <div className="row align-items-center servicios-descripcion-row mt-5" style={{gap: 0}}>
+      <div className="col-lg-6 d-flex align-items-center" style={{height: '100%'}}>
+        <p style={{ fontSize: '1.1rem', textAlign: 'justify', marginBottom: 0 }}>
+          En <strong>Lógica</strong>, ofrecemos un abanico completo de servicios digitales diseñados para impulsar el crecimiento y la transformación tecnológica de tu empresa. Desarrollamos <strong>software a medida</strong> que automatiza procesos, reduce costos y se adapta exactamente a tus necesidades operativas. Creamos <strong>aplicaciones móviles</strong> multiplataforma, modernas, fluidas y diseñadas para ofrecer experiencias intuitivas y de alto rendimiento, tanto en entornos Android como iOS. Nuestro equipo de desarrollo web se especializa en sitios responsivos, con un diseño profesional, optimizados para buscadores y orientados a convertir visitantes en clientes. Además, contamos con un servicio de <strong>hosting web seguro</strong>, escalable y con soporte técnico personalizado, ideal para mantener tus plataformas digitales siempre disponibles. Desde emprendimientos hasta grandes empresas, ayudamos a construir soluciones robustas, sostenibles y con enfoque en resultados reales. En Lógica, combinamos tecnología, diseño y estrategia para llevar tu presencia digital al siguiente nivel.
+        </p>
+      </div>
+      <div className="col-lg-6 d-flex align-items-center justify-content-center" style={{height: '100%'}}>
+        <img
+          src={servicios}
+          alt="Servicios digitales de Lógica"
+          className="img-fluid rounded shadow"
+          style={{ maxWidth: '100%', height: 'auto', marginBottom: 0 }}
+        />
+      </div>
+    </div>
+
+
+  </Container>
+</section>
 
       {/* Por qué elegirnos */}
       <section className="py-5 bg-white" aria-label="Ventajas de trabajar con Lógica">
         <Container>
           <h2 className="text-center mb-5 text-logica-green">¿Por qué elegir Lógica?</h2>
+<div className="mb-4">
+  <img src={bannerPorQueElegir} alt="Banner ¿Por qué elegir Lógica?" style={{maxWidth: '1200px', width: '100%', height: 'auto', boxShadow: '0 2px 16px rgba(0,0,0,0.08)'}} className="img-fluid d-block mx-auto" loading="lazy" />
+</div>
           <div className="row text-center g-5">
             {[
               { icon: 'laptop', title: 'Experiencia', text: 'Más de 3 años desarrollando soluciones con tecnologías modernas e IA.' },

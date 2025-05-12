@@ -8,6 +8,7 @@ function Nosotros() {
   return (
     <>
       <Helmet>
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
         <title>Quiénes Somos | Lógica - Desarrollo de Software en Chile</title>
         <meta 
           name="description" 
@@ -71,7 +72,7 @@ function Nosotros() {
                   content: <>
                     Completamos formación en <strong>Oracle Next Education</strong> con enfoque en <strong>Backend Java</strong>.
                     <p className="mt-2">
-                      Ver credenciales en <a href="https://www.linkedin.com/in/cristian-godoy-angel/details/certifications/" target="_blank" rel="noopener noreferrer" className="text-logica-green">LinkedIn</a>.
+                      Ver credenciales en <a href="https://www.linkedin.com/in/cristian-godoy-angel/details/certifications/" target="_blank" rel="noopener noreferrer" className="text-logica-green link-normal">LinkedIn</a>.
                     </p>
                   </>
                 },
@@ -132,8 +133,8 @@ function Nosotros() {
                 {
                   img: dev1,
                   name: "Cristian Andrés Godoy",
-                  role: "Fundador & Full Stack Developer",
-                  skills: "Experto en .NET, Java, React, SQL Server, AWS, automatización y arquitectura de software."
+                  role: "Full Stack Developer",
+                  skills: "Experto en Python.NET, Java, React, SQL Server, AWS, automatización y arquitectura de software."
                 },
                 {
                   img: dev2,

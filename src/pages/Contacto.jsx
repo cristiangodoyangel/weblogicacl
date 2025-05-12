@@ -55,6 +55,7 @@ function Contacto() {
     <>
       {/* SEO HEAD */}
       <Helmet>
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
         <title>Contacto | Lógica - Desarrollo Web en Chile</title>
         <meta
           name="description"
@@ -112,11 +113,11 @@ function Contacto() {
           {/* Canales de contacto */}
           <Row className="g-4 mb-5">
             <Col md={3} sm={6}>
-              <a href="mailto:cristian@weblogica.cl" className="contact-card-link">
+              <a href="mailto:contacto@weblogica.cl" className="contact-card-link">
                 <div className="contact-card text-center p-4">
                   <FaEnvelope className="contact-icon mb-2" />
                   <h5 className="text-logica-green">Email</h5>
-                  <p>cristian@weblogica.cl</p>
+                  <p>contacto@weblogica.cl</p>
                 </div>
               </a>
             </Col>
