@@ -437,6 +437,28 @@ button:focus-visible {
   text-decoration: underline;
 }
 
+/* ===== Servicios descripción alineación ===== */
+.servicios-descripcion-row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.servicios-descripcion-row .col-lg-6 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.servicios-descripcion-row img {
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  display: block;
+}
+
 /* ===== Modal ===== */
 
 .modal-content {

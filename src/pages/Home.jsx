@@ -99,7 +99,7 @@ function Home() {
 
 
    {/* Párrafo descriptivo con imagen al lado */}
-    <div className="row align-items-center servicios-descripcion-row mt-5" style={{gap: 0}}>
+    <div className="row align-items-center servicios-descripcion-row mt-5" style={{gap: '0.1rem'}}>
       <div className="col-lg-6 d-flex align-items-center" style={{height: '100%'}}>
         <p style={{ fontSize: '1.1rem', textAlign: 'justify', marginBottom: 0 }}>
           En <strong>Lógica</strong>, ofrecemos un abanico completo de servicios digitales diseñados para impulsar el crecimiento y la transformación tecnológica de tu empresa. Desarrollamos <strong>software a medida</strong> que automatiza procesos, reduce costos y se adapta exactamente a tus necesidades operativas. Creamos <strong>aplicaciones móviles</strong> multiplataforma, modernas, fluidas y diseñadas para ofrecer experiencias intuitivas y de alto rendimiento, tanto en entornos Android como iOS. Nuestro equipo de desarrollo web se especializa en sitios responsivos, con un diseño profesional, optimizados para buscadores y orientados a convertir visitantes en clientes. Además, contamos con un servicio de <strong>hosting web seguro</strong>, escalable y con soporte técnico personalizado, ideal para mantener tus plataformas digitales siempre disponibles. Desde emprendimientos hasta grandes empresas, ayudamos a construir soluciones robustas, sostenibles y con enfoque en resultados reales. En Lógica, combinamos tecnología, diseño y estrategia para llevar tu presencia digital al siguiente nivel.
@@ -110,7 +110,7 @@ function Home() {
           src={servicios}
           alt="Servicios digitales de Lógica"
           className="img-fluid rounded shadow"
-          style={{ maxWidth: '100%', height: 'auto', marginBottom: 0 }}
+          style={{ maxWidth: '85%', height: 'auto', marginBottom: 0, marginTop: 0 }}
         />
       </div>
     </div>
