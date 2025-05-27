@@ -1,7 +1,7 @@
 // src/components/Hero.jsx
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import banner from '../assets/banner.png';
+import banner from '../assets/banner.jpg';
 
 
 function Hero() {
