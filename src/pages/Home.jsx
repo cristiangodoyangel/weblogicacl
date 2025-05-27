@@ -11,6 +11,8 @@ import cliente1 from '../assets/clientes/m360.png';
 import cliente2 from '../assets/clientes/pmt.png';
 import cliente3 from '../assets/clientes/drpc.png';
 import cliente4 from '../assets/clientes/c360.png';
+import cliente5 from '../assets/clientes/htgrafica.png';
+import cliente6 from '../assets/clientes/reyts.png';
 
 import imagen1 from '../assets/slider/imagen1.jpg';
 import imagen2 from '../assets/slider/imagen2.jpg';
@@ -29,18 +31,27 @@ import spring from '../assets/tech/spring.svg';
 import mysql from '../assets/tech/mysql.svg';
 import docker from '../assets/tech/docker.svg';
 import github from '../assets/tech/github.svg';
+import pandas from '../assets/tech/pandas.png';
+import python from '../assets/tech/python.png';
+import django from '../assets/tech/django.png';
 
-import proyecto1 from '../assets/webs/cotizador.png';
+import proyecto1 from '../assets/webs/i360.png';
 import proyecto2 from '../assets/webs/drpc.png';
-import proyecto3 from '../assets/webs/i360.png';
+import proyecto3 from '../assets/webs/cotizador.png';
+import proyecto4 from '../assets/webs/htgrafica.png';
 
 const techLogos = [
+  { name: 'Python', src: python },
+  { name: 'Django', src: django },
+  { name: 'Pandas', src: pandas },
   { name: 'React', src: reactLogo },
   { name: 'Java', src: java },
   { name: 'Spring Boot', src: spring },
   { name: 'MySQL', src: mysql },
   { name: 'Docker', src: docker },
   { name: 'GitHub', src: github },
+
+
 ];
 
 const imgStyle = {
@@ -172,14 +183,15 @@ function Home() {
       {/* Clientes */}
       <section className="py-5 bg-light" aria-label="Empresas que confían en nosotros">
         <Container>
-          <h2 className="text-center mb-5 text-logica-green">Confían en Nosotros</h2>
+          <h2 className="text-center mb-5 text-logica-green">Empresas que confían en Nosotros</h2>
           <div className="clientes-marquee-wrapper">
-            <div className="clientes-marquee">
-              {[cliente1, cliente2, cliente3, cliente4].map((logo, index) => (
-                <img key={index} src={logo} alt={`Logo cliente ${index + 1}`} className="cliente-logo" loading="lazy" />
-              ))}
-            </div>
-          </div>
+  <div className="clientes-marquee">
+    {[cliente1, cliente2, cliente3, cliente4, cliente5, cliente6, cliente1, cliente2, cliente3, cliente4, cliente5, cliente6].map((logo, index) => (
+      <img key={index} src={logo} alt={`Logo cliente ${index + 1}`} className="cliente-logo" loading="lazy" />
+    ))}
+  </div>
+</div>
+
         </Container>
       </section>
 
@@ -190,7 +202,9 @@ function Home() {
             <div className="col-md-6">
               <h2 className="mb-4 fw-bold">Tecnologías y Formación Continua</h2>
               <p className="text-muted mb-3">
-                En <strong>Lógica</strong> usamos React, Java, Spring Boot, MySQL y Docker...
+                En <strong>Lógica</strong> usamos Python, Django, Pandas, Java, Spring Boot, React, MySQL y Docker. Nos capacitamos constantemente para entregar soluciones actualizadas, eficientes y seguras.
+
+Participamos en cursos, bootcamps y certificaciones para mantenernos a la vanguardia del desarrollo tecnológico.
               </p>
             </div>
             <div className="col-md-6">
@@ -221,29 +235,35 @@ function Home() {
         <Container>
           <h2 className="text-center mb-5 text-logica-green">Nuestros Proyectos</h2>
           <div className="row text-center g-4">
-            {[proyecto2, proyecto1, proyecto3].map((image, index) => {
+            {[proyecto1, proyecto2, proyecto3, proyecto4].map((image, index) => {
               const proyectos = [
                 {
+                  name: 'Control360',
+                  desc: 'Sistema integral de control de bodega y activos de empresa, actualmente usado por una empresa minera en Chile.',
+                  link: 'http://www.pmtapp.cl/',
+                },
+                {
                   name: 'Sistema de reservas de horas',
-                  desc: 'Permite agendar mantenciones y servicios técnicos.',
-                  link: 'https://drpcgamer.vercel.app/',
+                  desc: 'Permite agendar citas, puede ser usado en gran varidad de negocios. sistema integrado con WhatsApp.',
+                  link: 'https://reservadehoras.vercel.app/',
                 },
                 {
                   name: 'Sistema de Cotización en tiempo real',
-                  desc: 'Cotizaciones de productos y servicios online.',
+                  desc: 'Aplicación web para cotizaciones en tiempo real de productos y servicios, se integra fácilmente a varias tecnologías.',
                   link: 'https://cotizador360.vercel.app/',
                 },
                 {
-                  name: 'Control360',
-                  desc: 'Control de bodega y activos de empresa.',
-                  link: '',
+                  name: 'Sistema de Cotización en tiempo real',
+                  desc: 'Aplicación web para cotizaciones en tiempo real de productos y servicios, se integra fácilmente a varias tecnologías.',
+                  link: 'https://cotizador360.vercel.app/',
                 },
+               
               ];
               const p = proyectos[index];
               return (
                 <div className="col-md-6 col-lg-4" key={index}>
-                  <div className="project-box p-3 bg-white shadow-sm h-100">
-                    <img src={image} alt={p.name} className="img-fluid mb-3" style={{ maxHeight: '150px', objectFit: 'contain' }} loading="lazy" />
+                  <div className="project-box p-3 shadow-sm h-100">
+                    <img src={image} alt={p.name} className="project-img mb-4" loading="lazy" />
                     <h5 className="fw-bold">{p.name}</h5>
                     <p className="text-muted">{p.desc}</p>
                     {p.link && (

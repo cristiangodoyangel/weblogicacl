@@ -197,14 +197,23 @@ button:focus-visible {
 }
 
 .clientes-marquee {
-  display: inline-flex;
-  animation: scroll-loop 180s linear infinite;
-  width: max-content;
+  display: flex;
+  animation: scroll-loop 40s linear infinite;
+  width: fit-content;
+}
+
+@keyframes scroll-loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .cliente-logo {
-  height: 70px;
-  margin: 0 80px;
+  height: 100px;
+  margin: 0 70px;
   filter: grayscale(100%);
   opacity: 0.6;
   transition: all 0.3s ease-in-out;
@@ -215,6 +224,7 @@ button:focus-visible {
   filter: grayscale(0%);
   opacity: 1;
 }
+
 
 @keyframes scroll-loop {
   0% {
@@ -388,6 +398,17 @@ button:focus-visible {
   color: #333;
   font-size: 0.95rem;
   margin: 0;
+}
+
+.project-img {
+  max-height: 230px;
+  width: auto;
+  margin: 0 auto 1.5rem auto;
+  display: block;
+  object-fit: contain;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  border-radius: 8px;
 }
 
 /* ===== Botón principal ===== */
