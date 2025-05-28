@@ -39,6 +39,8 @@ import proyecto1 from '../assets/webs/i360.png';
 import proyecto2 from '../assets/webs/drpc.png';
 import proyecto3 from '../assets/webs/cotizador.png';
 import proyecto4 from '../assets/webs/htgrafica.png';
+import proyecto5 from '../assets/webs/m360.png';
+import proyecto6 from '../assets/webs/pmt.png';
 
 const techLogos = [
   { name: 'Python', src: python },
@@ -235,7 +237,7 @@ Participamos en cursos, bootcamps y certificaciones para mantenernos a la vangua
         <Container>
           <h2 className="text-center mb-5 text-logica-green">Nuestros Proyectos</h2>
           <div className="row text-center g-4">
-            {[proyecto1, proyecto2, proyecto3, proyecto4].map((image, index) => {
+            {[proyecto1, proyecto2, proyecto3, proyecto4, proyecto5, proyecto6].map((image, index) => {
               const proyectos = [
                 {
                   name: 'Control360',
@@ -253,9 +255,20 @@ Participamos en cursos, bootcamps y certificaciones para mantenernos a la vangua
                   link: 'https://cotizador360.vercel.app/',
                 },
                 {
-                  name: 'Sistema de Cotización en tiempo real',
-                  desc: 'Aplicación web para cotizaciones en tiempo real de productos y servicios, se integra fácilmente a varias tecnologías.',
-                  link: 'https://cotizador360.vercel.app/',
+                  name: 'Página web para HT Grafica',
+                  desc: 'Página web para empresa HT Gráfica, empresa que se dedica a la impresión y publicidad.',
+                  link: 'https://www.htgrafica.cl/',
+                },
+                {
+                  name: 'Página web para Motors360',
+                  desc: 'Página web para empresa Motors360, empresa que provee equipamiento para la gran minería y servicios integrales.',
+                  link: 'https://www.motors360.cl/',
+                },
+
+                {
+                  name: 'Página web para PM&T Integra',
+                  desc: 'Página web para empresa PM&T Integra, empresa especializada en proyectos de y soluciones informáticas, fibra óptica y conectividad.',
+                  link: 'https://www.pmtintegra.cl/',
                 },
                
               ];
