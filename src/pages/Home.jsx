@@ -14,6 +14,40 @@ import cliente4 from '../assets/clientes/c360.png';
 import cliente5 from '../assets/clientes/htgrafica.png';
 import cliente6 from '../assets/clientes/reyts.png';
 
+const clientesData = [
+  {
+    logo: cliente1,
+    alt: 'Motors360',
+    url: 'https://www.motors360.cl/'
+  },
+  {
+    logo: cliente2,
+    alt: 'PM&T Integra',
+    url: 'https://www.pmtintegra.cl/'
+  },
+  {
+    logo: cliente6,
+    alt: 'REYTS',
+    url: 'https://www.reyts.cl/'
+  },
+  {
+    logo: cliente3,
+    alt: 'Dr PC Gamer',
+    url: 'https://www.drpcgamer.cl/'
+  },
+  {
+    logo: cliente4,
+    alt: 'Control360',
+    url: 'http://www.pmtapp.cl/'
+  },
+  {
+    logo: cliente5,
+    alt: 'HT Gráfica',
+    url: 'https://www.htgrafica.cl/'
+  },
+
+];
+
 import imagen1 from '../assets/slider/imagen1.jpg';
 import imagen2 from '../assets/slider/imagen2.jpg';
 import imagen3 from '../assets/slider/imagen3.jpg';
@@ -186,14 +220,54 @@ function Home() {
       <section className="py-5 bg-light" aria-label="Empresas que confían en nosotros">
         <Container>
           <h2 className="text-center mb-5 text-logica-green">Empresas que confían en Nosotros</h2>
-          <div className="clientes-marquee-wrapper">
-  <div className="clientes-marquee">
-    {[cliente1, cliente2, cliente3, cliente4, cliente5, cliente6, cliente1, cliente2, cliente3, cliente4, cliente5, cliente6].map((logo, index) => (
-      <img key={index} src={logo} alt={`Logo cliente ${index + 1}`} className="cliente-logo" loading="lazy" />
-    ))}
-  </div>
-</div>
-
+          <div className="container">
+            <div className="row justify-content-center g-4 mb-2">
+              {clientesData.slice(0, 3).map((cliente, idx) => (
+                <div className="col-12 col-sm-4 d-flex justify-content-center" key={idx}>
+                  <div className="cliente-grid-item position-relative">
+                    <a href={cliente.url} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={cliente.logo}
+                        alt={cliente.alt}
+                        className="cliente-grid-logo"
+                        loading="lazy"
+                        onMouseOver={e => e.currentTarget.nextSibling.style.opacity = 1}
+                        onMouseOut={e => e.currentTarget.nextSibling.style.opacity = 0}
+                        style={{ cursor: 'pointer' }}
+                      />
+                      <div className="cliente-tooltip" style={{ opacity: 0 }}>
+                        <div><strong>{cliente.alt}</strong></div>
+                        <div style={{ fontSize: '0.85em', color: '#00b35a' }}>{cliente.url}</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="row justify-content-center g-4">
+              {clientesData.slice(3, 6).map((cliente, idx) => (
+                <div className="col-12 col-sm-4 d-flex justify-content-center" key={idx + 3}>
+                  <div className="cliente-grid-item position-relative">
+                    <a href={cliente.url} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={cliente.logo}
+                        alt={cliente.alt}
+                        className="cliente-grid-logo"
+                        loading="lazy"
+                        onMouseOver={e => e.currentTarget.nextSibling.style.opacity = 1}
+                        onMouseOut={e => e.currentTarget.nextSibling.style.opacity = 0}
+                        style={{ cursor: 'pointer' }}
+                      />
+                      <div className="cliente-tooltip" style={{ opacity: 0 }}>
+                        <div><strong>{cliente.alt}</strong></div>
+                        <div style={{ fontSize: '0.85em', color: '#00b35a' }}>{cliente.url}</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </Container>
       </section>
 
