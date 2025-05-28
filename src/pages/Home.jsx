@@ -271,8 +271,19 @@ function Home() {
         </Container>
       </section>
 
-      {/* Tecnologías */}
-      <section className="py-5 bg-white" aria-label="Tecnologías utilizadas por Lógica">
+
+      {/* CTA */}
+      <section className="py-5 text-center" style={{ backgroundColor: '#1A2A44', color: 'white' }} aria-label="Llamado a la acción contacto">
+        <Container>
+          <img src={logo} alt="Logo de Lógica" height="150" className="mb-4" loading="lazy" />
+          <h2 className="mb-3">¿Listo para dar el siguiente paso?</h2>
+          <p className="mb-4">Conversemos sobre cómo podemos ayudarte.</p>
+          <a href="/contacto" className="btn btn-success btn-lg">Contáctanos Ahora</a>
+        </Container>
+      </section>
+
+            {/* Tecnologías */}
+            <section className="py-5 bg-white" aria-label="Tecnologías utilizadas por Lógica">
         <Container>
           <div className="row align-items-center">
             <div className="col-md-6">
@@ -280,7 +291,7 @@ function Home() {
               <p className="text-muted mb-3">
                 En <strong>Lógica</strong> usamos Python, Django, Pandas, Java, Spring Boot, React, MySQL y Docker. Nos capacitamos constantemente para entregar soluciones actualizadas, eficientes y seguras.
 
-Participamos en cursos, bootcamps y certificaciones para mantenernos a la vanguardia del desarrollo tecnológico.
+                Participamos en cursos, bootcamps y certificaciones para mantenernos a la vanguardia del desarrollo tecnológico.
               </p>
             </div>
             <div className="col-md-6">
@@ -296,15 +307,6 @@ Participamos en cursos, bootcamps y certificaciones para mantenernos a la vangua
         </Container>
       </section>
 
-      {/* CTA */}
-      <section className="py-5 text-center" style={{ backgroundColor: '#1A2A44', color: 'white' }} aria-label="Llamado a la acción contacto">
-        <Container>
-          <img src={logo} alt="Logo de Lógica" height="150" className="mb-4" loading="lazy" />
-          <h2 className="mb-3">¿Listo para dar el siguiente paso?</h2>
-          <p className="mb-4">Conversemos sobre cómo podemos ayudarte.</p>
-          <a href="/contacto" className="btn btn-success btn-lg">Contáctanos Ahora</a>
-        </Container>
-      </section>
 
       {/* Proyectos */}
       <section className="py-5 bg-light" aria-label="Proyectos desarrollados por Lógica">
