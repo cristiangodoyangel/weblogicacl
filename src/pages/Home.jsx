@@ -214,7 +214,7 @@ function Home() {
       {/* ¿Por qué elegirnos? */}
       <section className="py-5 bg-white" aria-label="Ventajas de trabajar con Lógica">
         <Container>
-          <h2 className="text-center mb-5 text-logica-green">¿Por qué elegir Lógica.?</h2>
+          <h2 className="text-center mb-5 text-logica-green">¿Por qué elegir Lógica?</h2>
           <style>{`
   @media (max-width: 630px) {
     .hide-on-mobile { display: none !important; }
