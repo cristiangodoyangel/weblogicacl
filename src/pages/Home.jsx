@@ -171,19 +171,38 @@ function Home() {
                 </div>
               </div>
               <div className="col-md-6 d-flex h-100">
-                <Swiper
-                  modules={[Autoplay, EffectCube]}
-                  effect="cube"
-                  speed={1200}
-                  autoplay={{ delay: 3500, disableOnInteraction: false }}
-                  style={{ width: '100%', height: '100%' }}
-                >
-                  {[imagen1, imagen2, imagen3, imagen4].map((img, idx) => (
-                    <SwiperSlide key={idx}>
-                      <img src={img} alt={`Slide ${idx + 1}`} style={imgStyle} loading="lazy" />
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+                <div className="hide-on-mobile" style={{
+  width: '100%',
+  maxWidth: '500px',
+  margin: '0 auto',
+  aspectRatio: '16/9',
+  position: 'relative'
+}}>
+  <Swiper
+    modules={[Autoplay, EffectCube]}
+    effect="cube"
+    speed={1200}
+    autoplay={{ delay: 3500, disableOnInteraction: false }}
+    style={{ width: '100%', height: '100%' }}
+  >
+    {[imagen1, imagen2, imagen3, imagen4].map((img, idx) => (
+      <SwiperSlide key={idx} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <img
+          src={img}
+          alt={`Slide ${idx + 1}`}
+          style={{
+            maxWidth: '100%',
+            width: '100%',
+            height: 'auto',
+            objectFit: 'contain',
+            display: 'block'
+          }}
+          loading="lazy"
+        />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div>
 
        
               </div>
@@ -195,8 +214,26 @@ function Home() {
       {/* ¿Por qué elegirnos? */}
       <section className="py-5 bg-white" aria-label="Ventajas de trabajar con Lógica">
         <Container>
-          <h2 className="text-center mb-5 text-logica-green">¿Por qué elegir Lógica?</h2>
-          <img src={bannerPorQueElegir} alt="Ventajas de Lógica" className="img-fluid d-block mx-auto mb-4" style={{ maxWidth: '1200px', boxShadow: '0 2px 16px rgba(0,0,0,0.08)' }} loading="lazy" />
+          <h2 className="text-center mb-5 text-logica-green">¿Por qué elegir Lógica.?</h2>
+          <style>{`
+  @media (max-width: 630px) {
+    .hide-on-mobile { display: none !important; }
+  }
+`}</style>
+<div className="hide-on-mobile" style={{ width: '100%', maxWidth: '1350px', margin: '24px auto', display: 'flex', justifyContent: 'center' }}>
+  <img
+    src={bannerPorQueElegir}
+    alt="Ventajas de Lógica"
+    style={{
+      maxWidth: '100%',
+      height: 'auto',
+      display: 'block',
+      margin: 'auto',
+      boxShadow: '0 4px 24px rgba(0,0,0,0.13)'
+    }}
+    loading="lazy"
+  />
+</div>
           <div className="row text-center g-5">
             {[
               { icon: 'laptop', title: 'Experiencia', text: 'Más de 3 años desarrollando soluciones modernas e IA.' },
